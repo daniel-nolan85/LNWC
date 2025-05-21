@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pictures - LNWC</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-+..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap&subset=latin"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div id="navbar-container" class="sticky-top"></div>
+    <div id="header-container"></div>
+
+    <main>
+      <section class="container my-5">
+        <h2 class="mb-3" data-aos="fade-down">Pictures</h2>
+        <hr class="hr-main-left" data-aos="zoom-in" data-aos-delay="150" />
+
+        <p class="lead pt-3" data-aos="fade-up" data-aos-delay="100">
+          The following pictures were taken of wildlife around the Lake Norman
+          area. If you have any pictures you would like to share, please send
+          them to us at <a href="mailto:info@LNWC.org">info@LNWC.org</a>.
+        </p>
+
+        <div class="row g-3 py-4" id="gallery"></div>
+
+        <p data-aos="fade-up" data-aos-delay="100">
+          The above photos are shared with you via courtesy of: Lyn Reese,
+          George Stiles, Jill Feldmeyer, Mark Lancaster, Eloise Morano, Robert
+          Greault, and Jim Ray.
+        </p>
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="photoModal"
+          tabindex="-1"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+              <div class="modal-body position-relative">
+                <button
+                  type="button"
+                  class="btn-close position-absolute top-0 end-0 m-3"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+                <img id="modalImage" src="" alt="Full Size" class="modal-img" />
+                <button
+                  id="prevBtn"
+                  class="btn btn-dark position-absolute start-0 top-50 translate-middle-y ms-3"
+                >
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <button
+                  id="nextBtn"
+                  class="btn btn-dark position-absolute end-0 top-50 translate-middle-y me-3"
+                >
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="footer-container"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="/js/injections.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
