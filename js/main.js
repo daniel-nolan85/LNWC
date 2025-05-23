@@ -105,6 +105,106 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  // Calendar
+  const calendarEl = document.getElementById("calendar");
+
+  const calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: "dayGridMonth",
+    contentHeight: "auto",
+    headerToolbar: {
+      left: "prev,next today",
+      center: "title",
+      right: "",
+    },
+    buttonText: {
+      today: "Today",
+    },
+    eventClassNames: function () {
+      return ["custom-event"];
+    },
+    events: function (fetchInfo, successCallback, failureCallback) {
+      fetch("/data/events.json")
+        .then((response) => {
+          if (!response.ok) throw new Error("Network response was not ok");
+          return response.json();
+        })
+        .then((data) => {
+          successCallback(data);
+        })
+        .catch((error) => {
+          console.error("Error fetching events:", error);
+          failureCallback(error);
+        });
+    },
+    eventClick: function (info) {
+      console.log("Event clicked:", info.event.title);
+      info.jsEvent.preventDefault();
+
+      const { title, start, extendedProps, url } = info.event;
+
+      document.getElementById("modalTitle").textContent = title;
+      document.getElementById("modalDescription").textContent =
+        extendedProps.description || "";
+
+      const metaHtml = `
+        ${
+          start
+            ? `<p class="meta-line"><i class="fa-regular fa-calendar-days text-main pe-2"></i><span>${start.toLocaleDateString()}</span></p>`
+            : ""
+        }
+        ${
+          extendedProps.time
+            ? `<p class="meta-line"><i class="fa-regular fa-clock text-main pe-1"></i><span>${extendedProps.time}</span></p>`
+            : ""
+        }
+        ${
+          extendedProps.location
+            ? `<p class="meta-line"><i class="fa-solid fa-location-dot text-main pe-2"></i><span>${extendedProps.location}</span></p>`
+            : ""
+        }
+        ${
+          extendedProps.price
+            ? `<p class="meta-line"><i class="fa-solid fa-money-bill-wave text-main pe-1"></i><span>${extendedProps.price}</span></p>`
+            : ""
+        }
+        ${
+          extendedProps.ages
+            ? `<p class="meta-line"><i class="fa-solid fa-user-group text-main pe-1"></i><span>${extendedProps.ages}</span></p>`
+            : ""
+        }
+      `;
+
+      document.getElementById("modalMeta").innerHTML = metaHtml;
+
+      const modalCTA = document.getElementById("modalCTA");
+
+      if (url) {
+        const isExternal =
+          !url.startsWith("/") && !url.includes(window.location.hostname);
+
+        modalCTA.innerHTML = `<a href="${url}" class="btn btn-main btn-lg mt-4" ${
+          isExternal ? 'target="_blank" rel="noopener noreferrer"' : ""
+        }>Learn More</a>`;
+      } else {
+        modalCTA.innerHTML = "";
+      }
+
+      document.getElementById("eventModal").style.display = "flex";
+    },
+  });
+
+  calendar.render();
+
+  // Calendar Modal logic
+  document.getElementById("closeModal").onclick = () => {
+    document.getElementById("eventModal").style.display = "none";
+  };
+  window.onclick = (e) => {
+    if (e.target.id === "eventModal") {
+      document.getElementById("eventModal").style.display = "none";
+    }
+  };
 });
 
 // Gallery

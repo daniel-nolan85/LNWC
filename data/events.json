@@ -1,0 +1,28 @@
+[
+  {
+    "title": "Young Explorers",
+    "start": "2025-03-18",
+    "time": "5:00pm-7:00pm",
+    "location": "Robbin Park: 17738 W. Catawba Avenue, Cornelius, NC 28031",
+    "description": "Does your child enjoy nature? Fascinated by animals and insects? Then check out Young Explorers, led by Lake Norman Wildlife Conservationists! In this program, children will investigate creatures that live in soil and wood, learn to identify local birds, plants, and wildflowers, investigate native trees, and cast for catfish and brim in the Robbins Park turtle pond.",
+    "url": "https://cornelius.org/park/classes___programs/recreation/young_explorers.php",
+    "price": "$55.00 for residents / $70.00 for non-residents",
+    "ages": "7-12 years"
+  },
+  {
+    "title": "Earth Jam",
+    "start": "2025-04-12",
+    "time": "4:00pm-7:00pm",
+    "location": "Robbin Park: 17738 W. Catawba Avenue, Cornelius, NC 28031",
+    "description": "This free event is a great way to come together as a community to celebrate Earth Day, eat delicious food, listen to live music, enjoy drinks from local breweries, and most importantly, learn how we can create change in our community to be a little kinder to our planet!",
+    "url": "/projects/earth-jam.html",
+    "price": "Free"
+  },
+  {
+    "title": "Clean & Green",
+    "start": "2025-04-26",
+    "time": "9:00am-1:00pm",
+    "location": "Kings Point Marina: 18020 Kings Point Drive, Cornelius, NC 28031",
+    "description": "Help us turn trash into trees! To continue the work of reforesting Robbins Park after the removal of invasive bamboo, we will be hosting a community-wide cleanup. The North Carolina Wildlife Federation will be donating 1 tree for every 25 pounds of trash collected, and Lake Norman Wildlife Conservationists will be matching their donation! More details coming soon!"
+  }
+]
