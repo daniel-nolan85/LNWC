@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navbarHTML = `
       <nav class="navbar navbar-expand-lg navbar-dark bg-main" >
   <div class="container">
-    <a href="/index.html" class="navbar-brand" data-aos="zoom-in" data-aos-duration="1000">
+    <a href="/" class="navbar-brand" data-aos="zoom-in" data-aos-duration="1000">
       <img
         src="/images/lnwc-logo-round.png"
         width="80"
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="collapse navbar-collapse" id="navbarNav" data-aos="fade-up" data-aos-duration="1000">
       <ul class="navbar-nav ms-lg-auto">
         <li class="nav-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-          <a href="/index.html" class="nav-link" data-match="/index.html">Home</a>
+          <a href="/" class="nav-link" data-match="/">Home</a>
         </li>
         <li class="nav-item dropdown" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
           <a
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <a href="/fish-attractor-map.html" class="nav-link" data-match="/fish-attractor-map.html">Fish Attractor Map</a>
         </li>
       </ul>
-      <a href="/donate.html" class="btn btn-white btn-lg mt-2 mb-3 my-lg-0 ms-lg-4" data-aos="fade-left" data-aos-duration="1000">Donate Today</a>
+      <a href="/about/donations.html" class="btn btn-white btn-lg mt-2 mb-3 my-lg-0 ms-lg-4" data-aos="fade-left" data-aos-duration="1000">Donate Today</a>
     </div>
   </div>
 </nav>
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="col-lg-4 mb-3 mb-md-0">
         <ul class="nav flex-column">
           <li class="nav-item" data-aos="fade-right">
-            <a href="/index.html" class="nav-link text-light" data-match="/">Home</a>
+            <a href="/" class="nav-link text-light" data-match="/">Home</a>
           </li>
           <li class="nav-item dropdown" data-aos="fade-right" data-aos-delay="100">
             <a href="#" class="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown">About</a>
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       <!-- Center Logo -->
       <div class="col-lg-4 mb-4 mb-md-0 text-center py-4 py-lg-0">
-        <a href="/index.html" data-aos="zoom-in">
+        <a href="/" data-aos="zoom-in">
           <img
             src="/images/lnwc-logo-round.png"
             width="100"
