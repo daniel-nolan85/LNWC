@@ -1,7 +1,8 @@
 /* <-------------- Global Styles --------------> */
 :root {
-  --main-color: #4fa536;
-  --main-hover: #3f862b;
+  --main-color: #00416a;
+  --main-hover: #00598c;
+  --main-bg-color: rgba(0, 65, 106, 0.4);
 }
 
 body {
@@ -175,21 +176,15 @@ section {
   z-index: 3;
 }
 
-/* <-------------- Homepage --------------> */
-.live-cam-container {
-  position: relative;
-  width: 100%;
-  height: auto;
-  background: url("/images/lake-wide.jpg") no-repeat center center / cover;
-  color: white;
-  text-align: center;
-  padding: 5rem 1rem;
+.hero-text-bg {
+  background-color: var(--main-bg-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.overlay-content {
-  position: relative;
-  z-index: 2;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+/* <-------------- Homepage --------------> */
+.callout {
+  background-color: var(--main-color);
+  border-radius: 0;
 }
 
 .video-wrapper {
@@ -199,16 +194,32 @@ section {
   height: 100%;
 }
 
-.bg-overlay {
+.parallax-section {
+  background-image: url("/images/home/lake-norman-parallax.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  position: relative;
+}
+
+.parallax-section::before {
+  content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
   z-index: 1;
 }
 
-.callout {
-  background-color: var(--main-color);
-  border-radius: 0;
+.parallax-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.overlay-text-bg {
+  background-color: var(--main-bg-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .info-card img {
@@ -219,7 +230,7 @@ section {
 /* <-------------- Quotes --------------> */
 .statement {
   position: relative;
-  max-width: 600px;
+  max-width: 800px;
   width: 100%;
   margin: auto;
   padding: 1rem;
@@ -261,12 +272,14 @@ section {
   top: -2rem;
   left: 1rem;
   content: open-quote;
+  color: #fff;
 }
 
 .statement::after {
   bottom: 0.25rem;
   right: 1rem;
   content: close-quote;
+  color: var(--main-color);
 }
 
 .statement h2 {
@@ -501,6 +514,8 @@ section {
   border-radius: 10px;
   max-width: 500px;
   width: 90%;
+  max-height: 90vh;
+  overflow: auto;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
   position: relative;
   animation: fadeIn 0.3s ease-in-out;

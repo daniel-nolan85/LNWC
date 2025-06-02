@@ -92,19 +92,29 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
 
   const headerHTML = `
-        <header
-      class="hero-header text-white text-center d-flex align-items-center"
-    >
-      <div class="container">
-        <h1 class="display-4" data-aos="fade-down">Protect. Conserve. Restore</h1>
-        <hr class="hr-main" data-aos="zoom-in" data-aos-delay="150" />
-        <p class="lead mt-3" data-aos="fade-up" data-aos-delay="100">
-          LNWC is a chapter of the North Carolina Wildlife Federation (NCWF) - a
-          community based organization whose mission is to protect, conserve and
-          restore wildlife and habitat of the Lake Norman area.
-        </p>
-      </div>
-    </header>
+        <header class="hero-header text-white text-center d-flex align-items-center">
+  <div class="container">
+    <div class="hero-text-bg p-5" data-aos="fade-down">
+      <h1 class="display-4">Protect. Conserve. Restore</h1>
+      <hr class="hr-main" data-aos="zoom-in" data-aos-delay="150" />
+      <p class="lead mt-3" data-aos="fade-up" data-aos-delay="100">
+        LNWC is a chapter of the North Carolina Wildlife Federation (NCWF) — a
+        community-based organization whose mission is to protect, conserve and
+        restore wildlife and habitat of the Lake Norman area.
+      </p>
+      <div class="text-center">
+      <a
+          href="/about/membership.html"
+          class="btn btn-main btn-lg mt-4"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+          >Join LNWC Today</a
+        >
+        </div>
+    </div>
+  </div>
+</header>
+
       `;
 
   const footerHTML = `
@@ -176,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
 
         <div class="d-flex flex-column">
-          <a href="/about/membership.html" class="btn btn-main mb-2"" data-aos="zoom-in" data-aos-delay="100">Join LNWC</a>
+          <a href="/about/membership.html" class="btn btn-main mb-2"" data-aos="zoom-in" data-aos-delay="100">Join/Renew</a>
           <a href="/about/donations.html" class="btn btn-main"" data-aos="zoom-in" data-aos-delay="100">Donate Today</a>
         </div>
       </div>
