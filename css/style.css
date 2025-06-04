@@ -628,6 +628,15 @@ section {
     margin: 0 0 15px 30px;
   }
 }
+@media (max-width: 767px) {
+  .parallax-section {
+    background-attachment: scroll;
+  }
+
+  .parallax-section::before {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
 @media (max-width: 576px) {
   .logo-container {
     width: 120px;
