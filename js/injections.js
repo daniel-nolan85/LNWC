@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   <div class="container">
     <a href="/" class="navbar-brand" data-aos="zoom-in" data-aos-duration="1000">
       <img
-        src="/images/lnwc-logo-round.png"
+        src="/images/lnwc-logo-round.webp"
         width="80"
         alt="LNWC logo"
         class="d-inline-block align-top"
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="col-lg-4 mb-4 mb-md-0 text-center py-4 py-lg-0">
         <a href="/" data-aos="zoom-in">
           <img
-            src="/images/lnwc-logo-round.png"
+            src="/images/lnwc-logo-round.webp"
             width="100"
             alt="LNWC Logo"
             class="img-fluid"

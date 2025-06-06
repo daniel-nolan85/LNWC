@@ -152,7 +152,7 @@ section {
 
 /* <-------------- Header --------------> */
 .hero-header {
-  background-image: url("/images/hero.jpg");
+  background-image: url("/images/hero.webp");
   background-size: cover;
   background-position: 80% center;
   height: calc(100vh - 100px);
@@ -195,7 +195,7 @@ section {
 }
 
 .parallax-section {
-  background-image: url("/images/home/lake-norman-parallax.jpg");
+  background-image: url("/images/home/lake-norman-parallax.webp");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -631,10 +631,6 @@ section {
 @media (max-width: 767px) {
   .parallax-section {
     background-attachment: scroll;
-  }
-
-  .parallax-section::before {
-    background: rgba(0, 0, 0, 0.5);
   }
 }
 @media (max-width: 576px) {
