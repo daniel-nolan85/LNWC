@@ -14,7 +14,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 $firstName = sanitize($_POST['firstName'] ?? '');
 $lastName = sanitize($_POST['lastName'] ?? '');
 $email = filter_var($_POST['email'] ?? '', FILTER_VALIDATE_EMAIL);
+$phone = sanitize($_POST['phone'] ?? '');
 $comments = sanitize($_POST['comments'] ?? '');
+$involvement = $_POST['involvement'] ?? [];
+$otherText = sanitize($_POST['other_text'] ?? '');
 $recaptcha_response = $_POST['g-recaptcha-response'] ?? '';
 
 if (!$firstName || !$lastName || !$email || !$comments) {
@@ -56,8 +59,23 @@ $subject = "New Contact Form Submission from $firstName $lastName";
 
 $message = "You have received a new message from your website contact form:\n\n";
 $message .= "Name: $firstName $lastName\n";
-$message .= "Email: $email\n\n";
-$message .= "Comments:\n$comments\n";
+$message .= "Email: $email\n";
+
+if ($phone) {
+    $message .= "Phone: $phone\n";
+}
+
+if (!empty($involvement)) {
+    $message .= "\nInvolvement Interest:\n";
+    foreach ($involvement as $item) {
+        $message .= "- $item\n";
+    }
+    if ($otherText) {
+        $message .= "Other (specified): $otherText\n";
+    }
+}
+
+$message .= "\nComments:\n$comments\n";
 
 $headers = "From: no-reply@tawnys11.sg-host.com\r\n";
 $headers .= "Reply-To: $email\r\n";

@@ -20,14 +20,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <div id="navbar-container" class="sticky-top"></div>
-    <div id="header-container"></div>
 
     <main>
-      <section class="container my-5">
+      <section class="container">
         <div class="row align-items-center flex-column-reverse flex-md-row">
           <div class="col-md-6 text-center text-md-start">
             <h2 class="mb-3" data-aos="fade-down">Leadership Group</h2>
@@ -106,6 +107,131 @@
             <a href="mailto:billy.wilson@LNWC.org">billy.wilson@LNWC.org</a>
           </em>
         </p>
+      </section>
+
+      <section class="bg-main">
+        <div class="container">
+          <h2 class="mb-3 text-white" data-aos="fade-down">
+            Get Involved in Leadership
+          </h2>
+          <hr
+            class="hr-main-left-white"
+            data-aos="zoom-in"
+            data-aos-delay="150"
+          />
+
+          <p data-aos="fade-up" data-aos-delay="100" class="text-white">
+            <em>* Indicates required field</em>
+          </p>
+
+          <form
+            class="contact-form p-4 shadow-card bg-light"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            action="/php/handle-form.php"
+            method="POST"
+            id="organizationForm"
+          >
+            <div class="row">
+              <div
+                class="form-group col-md-6 mb-3"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <label for="firstName"
+                  >First name<span class="text-main">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="Enter your first name"
+                  required
+                />
+              </div>
+              <div
+                class="form-group col-md-6 mb-3"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <label for="lastName"
+                  >Last name<span class="text-main">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Enter your last name"
+                  required
+                />
+              </div>
+
+              <div
+                class="form-group col-md-6 mb-3"
+                data-aos="fade-up"
+                data-aos-delay="500"
+              >
+                <label for="email"
+                  >Email address<span class="text-main">*</span></label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="name@example.com"
+                  required
+                />
+              </div>
+
+              <div
+                class="form-group col-md-6 mb-3"
+                data-aos="fade-up"
+                data-aos-delay="600"
+              >
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  name="phone"
+                  placeholder="(123) 456-7890"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group" data-aos="fade-up" data-aos-delay="700">
+              <label for="comments"
+                >Tell us more<span class="text-main">*</span></label
+              >
+              <textarea
+                class="form-control"
+                id="comments"
+                name="comments"
+                rows="5"
+                placeholder="Share anything you'd like us to know or what you're most interested in helping with."
+                required
+              ></textarea>
+            </div>
+            <div
+              class="g-recaptcha mt-3"
+              data-sitekey="6Lc8vUUrAAAAAJ4Jh6tltRSnObyhjkmYk47JLzaw"
+              data-aos="fade-up"
+              data-aos-delay="800"
+            ></div>
+            <button
+              type="submit"
+              class="btn btn-main mt-3"
+              data-aos="fade-up"
+              data-aos-delay="900"
+            >
+              I'm Interested
+            </button>
+          </form>
+        </div>
       </section>
     </main>
 

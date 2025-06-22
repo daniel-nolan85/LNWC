@@ -77,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
           <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
             <li><a href="/resources/resources.html" class="dropdown-item" data-match="/resources/resources.html">Resources</a></li>
             <li><a href="/resources/diy-projects.html" class="dropdown-item" data-match="/resources/diy-projects.html">DIY Projects</a></li>
-            <li><a href="/resources/internet-links.html" class="dropdown-item" data-match="/resources/internet-links.html">Internet Links</a></li>
           </ul>
         </li>
         <li class="nav-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
@@ -90,32 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
 </nav>
 
         `;
-
-  const headerHTML = `
-        <header class="hero-header text-white text-center d-flex align-items-center">
-  <div class="container">
-    <div class="hero-text-bg p-5" data-aos="fade-down">
-      <h1 class="display-4">Protect. Conserve. Restore</h1>
-      <hr class="hr-main" data-aos="zoom-in" data-aos-delay="150" />
-      <p class="lead mt-3" data-aos="fade-up" data-aos-delay="100">
-        LNWC is a chapter of the North Carolina Wildlife Federation (NCWF) — a
-        community-based organization whose mission is to protect, conserve and
-        restore wildlife and habitat of the Lake Norman area.
-      </p>
-      <div class="text-center">
-      <a
-          href="/about/membership.html"
-          class="btn btn-main btn-lg mt-4"
-          data-aos="zoom-in"
-          data-aos-delay="100"
-          >Join LNWC Today</a
-        >
-        </div>
-    </div>
-  </div>
-</header>
-
-      `;
 
   const footerHTML = `
         <footer class="footer bg-dark text-light py-4">
@@ -155,7 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
             <ul class="dropdown-menu">
               <li><a href="/resources/resources.html" class="dropdown-item" data-match="resources.html">Resources</a></li>
               <li><a href="/resources/diy-projects.html" class="dropdown-item" data-match="diy-projects.html">DIY Projects</a></li>
-              <li><a href="/resources/internet-links.html" class="dropdown-item" data-match="internet-links.html">Internet Links</a></li>
             </ul>
           </li>
           <li class="nav-item" data-aos="fade-right" data-aos-delay="400">
@@ -206,7 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
 
   document.getElementById("navbar-container").innerHTML = navbarHTML;
-  document.getElementById("header-container").innerHTML = headerHTML;
   document.getElementById("footer-container").innerHTML = footerHTML;
 });
 

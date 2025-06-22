@@ -34,7 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const counters = document.querySelectorAll(".count");
   const duration = 2000;
   const options = {
-    threshold: 0.6,
+    root: null,
+    threshold: 1.0,
   };
 
   const startCount = (el) => {
@@ -63,21 +64,45 @@ document.addEventListener("DOMContentLoaded", function () {
         const el = entry.target;
         if (!el.classList.contains("counted")) {
           el.classList.add("counted");
-          startCount(el);
+
+          const delay =
+            window.scrollY === 0 && entry.intersectionRatio === 1 ? 1000 : 0;
+
+          setTimeout(() => startCount(el), delay);
         }
       }
     });
   }, options);
 
   counters.forEach((counter) => {
-    observer.observe(counter);
+    if ("requestIdleCallback" in window) {
+      requestIdleCallback(() => observer.observe(counter));
+    } else {
+      observer.observe(counter);
+    }
   });
+
+  // About Page Form
+  const checkbox = document.getElementById("otherCheck");
+  const inputGroup = document.getElementById("otherTextGroup");
+
+  if (checkbox && inputGroup) {
+    checkbox.addEventListener("change", function () {
+      if (this.checked) {
+        inputGroup.classList.add("open");
+      } else {
+        inputGroup.classList.remove("open");
+      }
+    });
+  }
 
   // FAQ
   const questions = document.querySelectorAll(".accordion-question");
-
+  console.log("Accordion elements found:", questions.length);
   questions.forEach((question) => {
     question.addEventListener("click", function () {
+      console.log("click");
+
       const answer = this.nextElementSibling;
       const icon = this.querySelector(".fa-plus-circle");
 

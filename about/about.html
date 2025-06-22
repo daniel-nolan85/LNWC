@@ -20,13 +20,67 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <div id="navbar-container" class="sticky-top"></div>
-    <div id="header-container"></div>
 
     <main>
+      <section class="container">
+        <div class="row align-items-center flex-column-reverse flex-md-row">
+          <div class="col-md-6">
+            <h2 class="mb-3" data-aos="fade-down">About Us</h2>
+            <hr class="hr-main-left" data-aos="zoom-in" data-aos-delay="150" />
+            <p class="lead pt-3" data-aos="fade-up" data-aos-delay="100">
+              LNWC is a chapter of the North Carolina Wildlife Federation (NCWF)
+              - a community based organization established for the purposes of
+              environmental education, appreciation of wildlife and natural
+              history, and conservation of wildlife habitat and natural
+              resources.
+            </p>
+          </div>
+          <div class="col-md-6 mb-4 mb-md-0 text-center">
+            <img
+              src="/images/about/award.webp"
+              class="img-fluid shadow-card"
+              alt="Wildlife award"
+              loading="lazy"
+              data-aos="zoom-in"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-light">
+        <div class="container">
+          <h2 class="mb-3" data-aos="fade-down">History</h2>
+          <hr class="hr-main-left" data-aos="zoom-in" data-aos-delay="150" />
+          <p class="lead pt-3" data-aos="fade-up" data-aos-delay="100">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
+            aut architecto unde hic aspernatur blanditiis voluptates asperiores
+            quas qui sit dicta perferendis repellendus velit vero sapiente
+            nesciunt, adipisci perspiciatis tempora expedita ab vitae illum odio
+            deleniti consequuntur! Voluptates non nostrum quas incidunt,
+            adipisci totam dolores obcaecati minima quaerat voluptas ratione
+            eius sed alias, reprehenderit accusantium reiciendis sunt esse
+            tempora, qui facere atque est. Vitae harum laboriosam provident
+            molestiae amet deleniti et repellendus odit debitis ab quod pariatur
+            exercitationem iure, voluptates praesentium hic ipsa veritatis nulla
+            similique nostrum suscipit. Enim nam quod eos fugiat facilis
+            deserunt ipsa soluta eligendi, atque quibusdam?
+          </p>
+
+          <a
+            href="#"
+            class="btn btn-main btn-lg mt-4"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+            >Learn More</a
+          >
+        </div>
+      </section>
+
       <section class="container">
         <div class="statement shadow-card text-center" data-aos="fade-up">
           <h2 class="text-center" data-aos="fade-down">Vision Statement</h2>
@@ -41,34 +95,201 @@
         </div>
       </section>
 
-      <section class="bg-light">
-        <div class="container my-5">
-          <div class="row align-items-center flex-column-reverse flex-md-row">
-            <div class="col-md-6 text-center text-md-start">
-              <h2 class="mb-3" data-aos="fade-down">About Us</h2>
-              <hr
-                class="hr-main-left"
-                data-aos="zoom-in"
-                data-aos-delay="150"
-              />
-              <p class="lead pt-3" data-aos="fade-up" data-aos-delay="100">
-                LNWC is a chapter of the North Carolina Wildlife Federation
-                (NCWF) - a community based organization established for the
-                purposes of environmental education, appreciation of wildlife
-                and natural history, and conservation of wildlife habitat and
-                natural resources.
-              </p>
+      <section class="bg-main">
+        <div class="container">
+          <h2 class="mb-3 text-white" data-aos="fade-down">Get Involved</h2>
+          <hr
+            class="hr-main-left-white"
+            data-aos="zoom-in"
+            data-aos-delay="150"
+          />
+          <p
+            class="lead pt-3 text-white"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            LNWC recently restructured several areas of the organization and our
+            programs, creating new opportunities for volunteers and leadership
+            roles.
+          </p>
+
+          <p data-aos="fade-up" data-aos-delay="100" class="text-white">
+            <em>* Indicates required field</em>
+          </p>
+
+          <form
+            class="contact-form p-4 shadow-card bg-light"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            action="/php/handle-form.php"
+            method="POST"
+            id="aboutForm"
+          >
+            <div class="row">
+              <div
+                class="form-group col-md-6 mb-3"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <label for="firstName"
+                  >First name<span class="text-main">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="Enter your first name"
+                  required
+                />
+              </div>
+              <div
+                class="form-group col-md-6 mb-3"
+                data-aos="fade-up"
+                data-aos-delay="400"
+              >
+                <label for="lastName"
+                  >Last name<span class="text-main">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Enter your last name"
+                  required
+                />
+              </div>
+
+              <div
+                class="form-group col-md-6 mb-3"
+                data-aos="fade-up"
+                data-aos-delay="500"
+              >
+                <label for="email"
+                  >Email address<span class="text-main">*</span></label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="name@example.com"
+                  required
+                />
+              </div>
+
+              <div
+                class="form-group col-md-6 mb-3"
+                data-aos="fade-up"
+                data-aos-delay="600"
+              >
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  name="phone"
+                  placeholder="(123) 456-7890"
+                  required
+                />
+              </div>
             </div>
-            <div class="col-md-6 mb-4 mb-md-0 text-center">
-              <img
-                src="/images/about/award.webp"
-                class="img-fluid shadow-card"
-                alt="Wildlife award"
-                loading="lazy"
-                data-aos="zoom-in"
-              />
+
+            <div
+              class="form-group mb-3"
+              data-aos="fade-up"
+              data-aos-delay="700"
+            >
+              <label>How Would You Like to Get Involved?</label><br />
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="volunteer"
+                  name="involvement[]"
+                  value="Volunteer"
+                />
+                <label class="form-check-label" for="volunteer"
+                  >Volunteer</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="partner"
+                  name="involvement[]"
+                  value="Partner/Collaborate"
+                />
+                <label class="form-check-label" for="partner"
+                  >Partner/Collaborate</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="donate"
+                  name="involvement[]"
+                  value="Donate"
+                />
+                <label class="form-check-label" for="donate">Donate</label>
+              </div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="otherCheck"
+                  name="involvement[]"
+                  value="Other"
+                />
+                <label class="form-check-label" for="otherCheck">Other</label>
+              </div>
+
+              <div class="mt-2 slide-toggle" id="otherTextGroup">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="otherText"
+                  name="other_text"
+                  placeholder="Please specify"
+                />
+              </div>
             </div>
-          </div>
+
+            <div class="form-group" data-aos="fade-up" data-aos-delay="800">
+              <label for="comments"
+                >Tell us more<span class="text-main">*</span></label
+              >
+              <textarea
+                class="form-control"
+                id="comments"
+                name="comments"
+                rows="5"
+                placeholder="Share anything you'd like us to know or what you're most interested in helping with."
+                required
+              ></textarea>
+            </div>
+            <div
+              class="g-recaptcha mt-3"
+              data-sitekey="6Lc8vUUrAAAAAJ4Jh6tltRSnObyhjkmYk47JLzaw"
+              data-aos="fade-up"
+              data-aos-delay="900"
+            ></div>
+            <button
+              type="submit"
+              class="btn btn-main mt-3"
+              data-aos="fade-up"
+              data-aos-delay="1000"
+            >
+              I'm Interested
+            </button>
+          </form>
         </div>
       </section>
     </main>
