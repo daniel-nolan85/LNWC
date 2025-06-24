@@ -49,11 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const progress = frame / totalFrames;
       const value = Math.round(target * progress);
 
-      el.textContent = value;
+      el.textContent = value.toLocaleString();
 
       if (frame === totalFrames) {
         clearInterval(counter);
-        el.textContent = target;
+        el.textContent = target.toLocaleString();
       }
     }, duration / totalFrames);
   };

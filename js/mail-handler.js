@@ -3,8 +3,9 @@ document.querySelectorAll("form.contact-form").forEach((form) => {
     e.preventDefault();
 
     const formData = new FormData(form);
-    const existingMessage = form.querySelector("#formMessage");
-    if (existingMessage) existingMessage.remove();
+
+    const existingAlert = form.querySelector(".alert");
+    if (existingAlert) existingAlert.remove();
 
     fetch(form.action, {
       method: form.method,
@@ -12,33 +13,40 @@ document.querySelectorAll("form.contact-form").forEach((form) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        const message = document.createElement("div");
-        message.id = "formMessage";
-        message.style.marginTop = "1rem";
+        const alertDiv = document.createElement("div");
+        alertDiv.classList.add("alert", "mt-3", "fade", "show");
 
         if (data.success) {
-          message.style.color = "green";
-          message.textContent = data.success;
+          alertDiv.classList.add("alert-success");
+          alertDiv.textContent = data.success;
           form.reset();
-          grecaptcha.reset();
+          if (typeof grecaptcha !== "undefined") grecaptcha.reset();
         } else if (data.error) {
-          message.style.color = "red";
-          message.textContent = data.error;
+          alertDiv.classList.add("alert-danger");
+          alertDiv.textContent = data.error;
         } else {
-          message.style.color = "orange";
-          message.textContent = "Unexpected response from server.";
+          alertDiv.classList.add("alert-warning");
+          alertDiv.textContent = "Unexpected response from the server.";
         }
 
-        form.appendChild(message);
+        form.appendChild(alertDiv);
+
+        setTimeout(() => {
+          alertDiv.classList.remove("show");
+          setTimeout(() => alertDiv.remove(), 150);
+        }, 6000);
       })
-      .catch((err) => {
-        const message = document.createElement("div");
-        message.id = "formMessage";
-        message.style.color = "red";
-        message.style.marginTop = "1rem";
-        message.textContent =
+      .catch(() => {
+        const alertDiv = document.createElement("div");
+        alertDiv.classList.add("alert", "alert-danger", "mt-3", "fade", "show");
+        alertDiv.textContent =
           "There was an error submitting the form. Please try again.";
-        form.appendChild(message);
+        form.appendChild(alertDiv);
+
+        setTimeout(() => {
+          alertDiv.classList.remove("show");
+          setTimeout(() => alertDiv.remove(), 150);
+        }, 6000);
       });
   });
 });
