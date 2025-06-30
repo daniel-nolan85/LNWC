@@ -39,12 +39,12 @@ document.addEventListener("DOMContentLoaded", function () {
             aria-expanded="false"
           >About</a>
           <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-            <li><a href="/about/about.html" class="dropdown-item" data-match="/about/about.html">About</a></li>
-            <li><a href="/about/organization.html" class="dropdown-item" data-match="/about/organization.html">Organization</a></li>
-            <li><a href="/about/membership.html" class="dropdown-item" data-match="/about/membership.html">Membership</a></li>
-            <li><a href="/about/donations.html" class="dropdown-item" data-match="/about/donations.html">Donations</a></li>
-            <li><a href="/about/faq.html" class="dropdown-item" data-match="/about/faq.html">FAQ</a></li>
-            <li><a href="/about/contact-us.html" class="dropdown-item" data-match="/about/contact-us.html">Contact Us</a></li>
+            <li><a href="about/about.html" class="dropdown-item" data-match="/about/about.html">About</a></li>
+            <li><a href="about/organization.html" class="dropdown-item" data-match="about/organization.html">Organization</a></li>
+            <li><a href="about/membership.html" class="dropdown-item" data-match="about/membership.html">Membership</a></li>
+            <li><a href="about/donations.html" class="dropdown-item" data-match="about/donations.html">Donations</a></li>
+            <li><a href="about/faq.html" class="dropdown-item" data-match="/about/faq.html">FAQ</a></li>
+            <li><a href="about/contact-us.html" class="dropdown-item" data-match="about/contact-us.html">Contact Us</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
@@ -57,12 +57,12 @@ document.addEventListener("DOMContentLoaded", function () {
             aria-expanded="false"
           >Activities</a>
           <ul class="dropdown-menu" aria-labelledby="activitiesDropdown">
-            <li><a href="/activities/activities.html" class="dropdown-item" data-match="/activities/activities.html">Activities</a></li>
-            <li><a href="/activities/calendar.html" class="dropdown-item" data-match="/activities/calendar.html">Calendar</a></li>
-            <li><a href="/activities/projects.html" class="dropdown-item" data-match="/activities/projects.html">Projects</a></li>
-            <li><a href="/activities/volunteer.html" class="dropdown-item" data-match="/activities/volunteer.html">Volunteer</a></li>
-            <li><a href="/activities/events.html" class="dropdown-item" data-match="/activities/events.html">Events</a></li>
-            <li><a href="/activities/pictures.html" class="dropdown-item" data-match="/activities/pictures.html">Pictures</a></li>
+            <li><a href="activities/activities.html" class="dropdown-item" data-match="activities/activities.html">Activities</a></li>
+            <li><a href="activities/calendar.html" class="dropdown-item" data-match="activities/calendar.html">Calendar</a></li>
+            <li><a href="activities/projects.html" class="dropdown-item" data-match="activities/projects.html">Projects</a></li>
+            <li><a href="activities/volunteer.html" class="dropdown-item" data-match="activities/volunteer.html">Volunteer</a></li>
+            <li><a href="activities/events.html" class="dropdown-item" data-match="activities/events.html">Events</a></li>
+            <li><a href="activities/pictures.html" class="dropdown-item" data-match="activities/pictures.html">Pictures</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
@@ -75,15 +75,15 @@ document.addEventListener("DOMContentLoaded", function () {
             aria-expanded="false"
           >Resources</a>
           <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
-            <li><a href="/resources/resources.html" class="dropdown-item" data-match="/resources/resources.html">Resources</a></li>
-            <li><a href="/resources/diy-projects.html" class="dropdown-item" data-match="/resources/diy-projects.html">DIY Projects</a></li>
+            <li><a href="resources/resources.html" class="dropdown-item" data-match="resources/resources.html">Resources</a></li>
+            <li><a href="resources/diy-projects.html" class="dropdown-item" data-match="resources/diy-projects.html">DIY Projects</a></li>
           </ul>
         </li>
         <li class="nav-item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
-          <a href="/fish-attractor-map.html" class="nav-link" data-match="/fish-attractor-map.html">Fish Attractor Map</a>
+          <a href="fish-attractor-map.html" class="nav-link" data-match="/fish-attractor-map.html">Fish Attractor Map</a>
         </li>
       </ul>
-      <a href="/about/donations.html" class="btn btn-white btn-lg mt-2 mb-3 my-lg-0 ms-lg-4" data-aos="fade-left" data-aos-duration="1000">Donate Today</a>
+      <a href="about/donations.html" class="btn btn-white btn-lg mt-2 mb-3 my-lg-0 ms-lg-4" data-aos="fade-left" data-aos-duration="1000">Donate Today</a>
     </div>
   </div>
 </nav>
@@ -104,34 +104,34 @@ document.addEventListener("DOMContentLoaded", function () {
           <li class="nav-item dropdown" data-aos="fade-right" data-aos-delay="100">
             <a href="#" class="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown">About</a>
             <ul class="dropdown-menu">
-              <li><a href="/about/about.html" class="dropdown-item" data-match="about.html">About</a></li>
-              <li><a href="/about/organization.html" class="dropdown-item" data-match="organization.html">Organization</a></li>
-              <li><a href="/about/membership.html" class="dropdown-item" data-match="membership.html">Membership</a></li>
-              <li><a href="/about/donations.html" class="dropdown-item" data-match="donations.html">Donations</a></li>
-              <li><a href="/about/faq.html" class="dropdown-item" data-match="faq.html">FAQ</a></li>
-              <li><a href="/about/contact-us.html" class="dropdown-item" data-match="contact-us.html">Contact Us</a></li>
+              <li><a href="about/about.html" class="dropdown-item" data-match="about.html">About</a></li>
+              <li><a href="about/organization.html" class="dropdown-item" data-match="organization.html">Organization</a></li>
+              <li><a href="about/membership.html" class="dropdown-item" data-match="membership.html">Membership</a></li>
+              <li><a href="about/donations.html" class="dropdown-item" data-match="donations.html">Donations</a></li>
+              <li><a href="about/faq.html" class="dropdown-item" data-match="faq.html">FAQ</a></li>
+              <li><a href="about/contact-us.html" class="dropdown-item" data-match="contact-us.html">Contact Us</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown" data-aos="fade-right" data-aos-delay="200">
             <a href="#" class="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown">Activities</a>
             <ul class="dropdown-menu">
-              <li><a href="/activities/activities.html" class="dropdown-item" data-match="activities.html">Activities</a></li>
-              <li><a href="/activities/calendar.html" class="dropdown-item" data-match="calendar.html">Calendar</a></li>
-              <li><a href="/activities/projects.html" class="dropdown-item" data-match="projects.html">Projects</a></li>
-              <li><a href="/activities/volunteer.html" class="dropdown-item" data-match="volunteer.html">Volunteer</a></li>
-              <li><a href="/activities/events.html" class="dropdown-item" data-match="events.html">Events</a></li>
-              <li><a href="/activities/pictures.html" class="dropdown-item" data-match="pictures.html">Pictures</a></li>
+              <li><a href="activities/activities.html" class="dropdown-item" data-match="activities.html">Activities</a></li>
+              <li><a href="activities/calendar.html" class="dropdown-item" data-match="calendar.html">Calendar</a></li>
+              <li><a href="activities/projects.html" class="dropdown-item" data-match="projects.html">Projects</a></li>
+              <li><a href="activities/volunteer.html" class="dropdown-item" data-match="volunteer.html">Volunteer</a></li>
+              <li><a href="activities/events.html" class="dropdown-item" data-match="events.html">Events</a></li>
+              <li><a href="activities/pictures.html" class="dropdown-item" data-match="pictures.html">Pictures</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown" data-aos="fade-right" data-aos-delay="300">
             <a href="#" class="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown">Resources</a>
             <ul class="dropdown-menu">
-              <li><a href="/resources/resources.html" class="dropdown-item" data-match="resources.html">Resources</a></li>
-              <li><a href="/resources/diy-projects.html" class="dropdown-item" data-match="diy-projects.html">DIY Projects</a></li>
+              <li><a href="resources/resources.html" class="dropdown-item" data-match="resources.html">Resources</a></li>
+              <li><a href="resources/diy-projects.html" class="dropdown-item" data-match="diy-projects.html">DIY Projects</a></li>
             </ul>
           </li>
           <li class="nav-item" data-aos="fade-right" data-aos-delay="400">
-            <a href="/fish-attractor-map.html" class="nav-link text-light" data-match="fish-attractor-map.html">Fish Attractor Map</a>
+            <a href="fish-attractor-map.html" class="nav-link text-light" data-match="fish-attractor-map.html">Fish Attractor Map</a>
           </li>
         </ul>
       </div>
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="col-lg-4 mb-4 mb-md-0 text-center py-4 py-lg-0">
         <a href="/" data-aos="zoom-in">
           <img
-            src="/images/lnwc-logo-round.webp"
+            src="images/lnwc-logo-round.webp"
             width="100"
             alt="LNWC Logo"
             class="img-fluid"
@@ -158,8 +158,8 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
 
         <div class="d-flex flex-column">
-          <a href="/about/membership.html" class="btn btn-main mb-2"" data-aos="zoom-in" data-aos-delay="100">Join/Renew</a>
-          <a href="/about/donations.html" class="btn btn-main"" data-aos="zoom-in" data-aos-delay="100">Donate Today</a>
+          <a href="about/membership.html" class="btn btn-main mb-2"" data-aos="zoom-in" data-aos-delay="100">Join/Renew</a>
+          <a href="about/donations.html" class="btn btn-main"" data-aos="zoom-in" data-aos-delay="100">Donate Today</a>
         </div>
       </div>
 
