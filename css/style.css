@@ -161,7 +161,7 @@ section {
 
 /* <-------------- Header --------------> */
 .hero-header {
-  background-image: url("images/hero.webp");
+  background-image: url("../images/hero.webp");
   background-size: cover;
   background-position: 80% center;
   height: calc(100vh - 100px);
@@ -204,7 +204,7 @@ section {
 }
 
 .parallax-section {
-  background-image: url("images/home/lake-norman-parallax.webp");
+  background-image: url("../images/home/lake-norman-parallax.webp");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
